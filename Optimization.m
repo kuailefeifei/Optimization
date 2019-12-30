@@ -1,4 +1,4 @@
-%% Use gradient descent to calculate minimum value of function and visualize the optimization process 
+%% Use gradient descent to calculate minimum value of function 
 x = linspace(-2,2);
 y  = x;
 [X,Y] = meshgrid(x);
@@ -39,9 +39,13 @@ for i = 1:10
     end
     
 end
+
+%% Visualize the optimization Progress
 plot(xSearchSpace,ySearchSpace,'r','LineWidth',1.5)
+plot(xSearchSpace,ySearchSpace,'r*')
 hold off
 figure
 surf(X,Y,F);
 hold on
 plot3(xSearchSpace,ySearchSpace,fSearchSpace,'r','LineWidth',1.5)
+plot3(xSearchSpace,ySearchSpace,fSearchSpace,'r*')
